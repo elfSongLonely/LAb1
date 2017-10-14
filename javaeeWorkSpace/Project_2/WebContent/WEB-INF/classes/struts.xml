@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="com.bookcase.struts2" extends="struts-default">
+
+		<action name="allBook" class="com.bookcase.struts2.Searchauthor"
+			method="execute">
+			<result name="success">/allOfBook.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="inform" class="com.bookcase.struts2.Information"
+			method="execute">
+			<result name="success">/allOfInformation.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="delete" class="com.bookcase.struts2.DeleteBook"
+			method="execute">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="back" class="com.bookcase.struts2.Author" method="execute">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+			<action name="show" class="com.bookcase.struts2.Author" method="execute">
+			<result name="success">/showmysql.jsp</result>
+		</action>
+
+		<action name="update" class="com.bookcase.struts2.Jump" method="execute">
+			<result name="success">/updateBook.jsp</result>
+		</action>
+
+		<action name="run" class="com.bookcase.struts2.Update" method="execute">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="book" class="com.bookcase.struts2.Create" method="createNewBook">
+			<result name="success">/success.jsp</result>
+			<result name="error">/newAuthor.jsp</result>
+		</action>
+		<action name="author" class="com.bookcase.struts2.Create"
+			method="createNewAuthor">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+	</package>
+</struts>	
