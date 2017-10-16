@@ -30,7 +30,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
-//four
+<<<<<<< HEAD
+//five
+=======
+//five
+>>>>>>> C4
 
 /**
  * <dl>
