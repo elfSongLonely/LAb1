@@ -343,6 +343,7 @@ public class Main extends Application {
 	static int randomCount=0;
 	String randomStr=new String();
     public static void main(String[] args) {
+		// insertion;
         launch(args);
     }
     @Override
@@ -350,19 +351,19 @@ public class Main extends Application {
     {
 		Main a = new Main();
     	a.Init();
-        primaryStage.setTitle("ÊµÑéÒ»");
+        primaryStage.setTitle("Êµï¿½ï¿½Ò»");
         Button opentxt = new Button();
         Button showgraph=new Button();
         Button findbirdgewords=new Button();
         Button createnewtxt = new Button();
         Button shortestpath=new Button();
         Button randomwalk=new Button();
-        opentxt.setText("¶ÁÈëÎÄ±¾Éú³ÉÓÐÏòÍ¼");
-        showgraph.setText("Õ¹Ê¾ÓÐÏòÍ¼");
-        findbirdgewords.setText("Ñ°ÕÒÇÅ½Ó´Ê");
-        createnewtxt.setText("Éú³ÉÐÂÎÄ±¾");
-        shortestpath.setText("¼ÆËã×î¶ÌÂ·¾¶");
-        randomwalk.setText("Ëæ»úÓÎ×ß");
+        opentxt.setText("ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼");
+        showgraph.setText("Õ¹Ê¾ï¿½ï¿½ï¿½ï¿½Í¼");
+        findbirdgewords.setText("Ñ°ï¿½ï¿½ï¿½Å½Ó´ï¿½");
+        createnewtxt.setText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½");
+        shortestpath.setText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½");
+        randomwalk.setText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         opentxt.setTranslateY(-180);
         showgraph.setTranslateY(-110);
         findbirdgewords.setTranslateY(-40);
@@ -436,11 +437,11 @@ public class Main extends Application {
     public void openText(Stage primaryStage,Main a)
     {
     	 Label flag = new Label();
-    	 primaryStage.setTitle("¶ÁÈëÎÄ±¾Éú³ÉÓÐÏòÍ¼");
+    	 primaryStage.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼");
     	 primaryStage.setWidth(500);
     	 primaryStage.setHeight(500);
          Button graph = new Button();
-         graph.setText("Ñ¡ÔñÎÄ¼þ");
+         graph.setText("Ñ¡ï¿½ï¿½ï¿½Ä¼ï¿½");
          graph.setOnAction(new EventHandler<ActionEvent>() {
              @Override
              public void handle(ActionEvent event) {
@@ -451,7 +452,7 @@ public class Main extends Application {
                  if(file!=null)
                  {
                 	 a.build(file);
-                	 flag.setText("´ò¿ª³É¹¦");
+                	 flag.setText("ï¿½ò¿ª³É¹ï¿½");
                 	 flag.setTextFill(Color.GREEN);
                 	 flag.setTranslateY(20);
                  }
@@ -459,7 +460,7 @@ public class Main extends Application {
                  {
                 	 file=new File("D:\\1.txt");
                 	 a.build(file);
-                	 flag.setText("ÎÄ¼þÎª¿Õ£¬Ê¹ÓÃÄ¬ÈÏÖµD:\\\\1.txt");
+                	 flag.setText("ï¿½Ä¼ï¿½Îªï¿½Õ£ï¿½Ê¹ï¿½ï¿½Ä¬ï¿½ï¿½ÖµD:\\\\1.txt");
                 	 flag.setTextFill(Color.RED);
                 	 flag.setTranslateY(20);
                  }
@@ -473,8 +474,8 @@ public class Main extends Application {
     }
     public void showDirectedGraph(Stage primaryStage,Main a)
     {
-    	primaryStage.setTitle("ÏÔÊ¾ÓÐÏòÍ¼");
-    	primaryStage.setTitle("Ëæ»úÓÎ×ß");
+    	primaryStage.setTitle("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Í¼");
+    	primaryStage.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     	GridPane root =new GridPane();
     
      	GraphViz gV = new GraphViz();
@@ -487,7 +488,7 @@ public class Main extends Application {
     	gV.writeGraphToFile(gV.getGraph(gV.getDotSource(), "jpg"), file);
     	
     	
-    	Button button=new Button("Õ¹Ê¾ÓÐÏòÍ¼");
+    	Button button=new Button("Õ¹Ê¾ï¿½ï¿½ï¿½ï¿½Í¼");
     	ImageView imageView = new ImageView();
         imageView.setVisible(true);
         imageView.setFitWidth(900);
@@ -505,14 +506,14 @@ public class Main extends Application {
     }
     public void findDirdgeWords(Stage primaryStage,Main a)
     {
-    	primaryStage.setTitle("²éÕÒÇÅ½Ó´Ê");
+    	primaryStage.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½Å½Ó´ï¿½");
     	GridPane root =new GridPane();
     	Label label1=new Label("Word1:");
     	Label label2=new Label("Word2:");
         TextField textFieldA = new TextField();
         TextField textFieldB = new TextField();
         TextField textFieldC = new TextField();
-        Button button=new Button("²éÕÒ");
+        Button button=new Button("ï¿½ï¿½ï¿½ï¿½");
         root.add(label1, 0, 0);
         root.add(label2, 0, 1);
         root.add(textFieldA, 1, 0);
@@ -530,13 +531,13 @@ public class Main extends Application {
     }
     public void createNewTxt(Stage primaryStage,Main a)
     {
-    	primaryStage.setTitle("Éú³ÉÐÂÎÄ±¾");
+    	primaryStage.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½");
     	GridPane root =new GridPane();
-    	Label label1=new Label("ÊäÈëÐÂÎÄ±¾:");
-    	Label label2=new Label("Éú³ÉÐÂÎÄ±¾:");
+    	Label label1=new Label("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½:");
+    	Label label2=new Label("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½:");
         TextField textFieldA = new TextField();
         TextField textFieldB = new TextField();
-        Button button=new Button("Éú³É");
+        Button button=new Button("ï¿½ï¿½ï¿½ï¿½");
         root.add(label1, 0, 0);
         root.add(textFieldA, 1, 0);
         root.add(button, 1, 1);
@@ -554,7 +555,7 @@ public class Main extends Application {
     }
     public void searchShortestPath(Stage primaryStage,Main a)
     {
-    	primaryStage.setTitle("Ñ°ÕÒ×î¶ÌÂ·¾¶");
+    	primaryStage.setTitle("Ñ°ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½");
     	GridPane root =new GridPane();
     	Label label1=new Label("Word1:");
     	Label label2=new Label("Word2:");
@@ -562,7 +563,7 @@ public class Main extends Application {
         TextField textFieldB = new TextField();
         TextArea textArea = new TextArea();
         textArea.setMaxSize(300,300);
-        Button button=new Button("²éÕÒ");
+        Button button=new Button("ï¿½ï¿½ï¿½ï¿½");
         root.add(label1, 0, 0);
         root.add(label2, 0, 1);
         root.add(textFieldA, 1, 0);
@@ -579,9 +580,9 @@ public class Main extends Application {
         primaryStage.show();
     }
     public void RandomWalk(Stage primaryStage,Main a) {
-    	primaryStage.setTitle("Ëæ»úÓÎ×ß");
+    	primaryStage.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     	GridPane root =new GridPane();
-    	Button button=new Button("ÏÂÒ»½Úµã");
+    	Button button=new Button("ï¿½ï¿½Ò»ï¿½Úµï¿½");
     	TextField text=new TextField();
     	text.setPrefWidth(600);
     	//text.setPrefHeight(400);
